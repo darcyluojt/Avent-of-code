@@ -19,20 +19,16 @@ end
 
 
 
-sum = 0
+zeros = 0
 point = 50
-content.each_with_index do |rotation, i|
+
+content.each do |rotation|
   direction = rotation.start_with?("L") ? -1 : 1
   steps = rotation[1..].to_i
   steps.times do
     point += direction
-    case point
-    when 100
-      point = 0
-    when -1
-      point = 99
-    end
-    sum += 1 if point.zero?
+    point %= 100
+    zeros += 1 if point.zero?
   end
 end
-puts sum
+puts zeros
