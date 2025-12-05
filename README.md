@@ -1,2 +1,5 @@
-<h2>Advent of Code 2024</h2>
-<a href="https://aoc.lewagon.community/?referral_code=R29198">My Avent of Code link through Le Wagon</a>
+<h1>A journey of collecting stars</h1>
+<h2>Advent of Code</h2>
+
+<p><strong>2025:</strong> In the making.... </p>
+<p><strong>2024:</strong> 32🌟 </p>
