@@ -28,19 +28,17 @@ def distance(pos1, pos2)
 end
 
 
-def get_shortest_path(points)
-  min = {}
-  points.each do |pos1|
-    distance = [nil, Float::INFINITY]
-    points.each do |pos2|
-      next if pos1 == pos2
-      dis = distance(pos1, pos2)
-      distance = [pos2, dis] if dis < distance.last
-    end
-    min[pos1] = distance
+min = {}
+points.each do |pos1|
+  distance = [nil, Float::INFINITY]
+  points.each do |pos2|
+    next if pos1 == pos2
+    dis = distance(pos1, pos2)
+    distance = [pos2, dis] if dis < distance.last
   end
-  min.sort_by{ |k,v| v.last}
+  min[pos1] = distance
 end
+min = min.sort_by{ |k,v| v.last}
 
-longest = get_shortest_path(points).last
+longest = min.last
 p longest.first[0] * longest.last[0][0]

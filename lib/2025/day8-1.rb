@@ -92,3 +92,5 @@ end
 
 p m
 puts "Time taken: #{Time.now - now} seconds"
+
+# 6. try with challenge part2
